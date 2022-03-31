@@ -1,0 +1,18 @@
+/* Utilities */
+@use 'variables' as v;
+
+.text-center {
+	text-align: center;
+}
+
+.bg-primary {
+	background-color: v.$primary;
+}
+
+.bg-white {
+	background-color: v.$white;
+}
+
+.margin-negative-5 {
+	margin-top: -5rem;
+}

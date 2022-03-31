@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nav-main {
+    display: flex;
+    flex-direction: column;
+    margin-top: v.$separation;
+
+    @include m.tablet {
+        flex-direction: row;
+        gap: 2rem;
+     }
+
+     a {
+         text-align: center;
+         color: v.$white;
+         text-transform: uppercase;
+         font-size: 2rem;
+         font-weight: 700;
+         margin-bottom: 2rem;
+         transition-property: color;
+         transition-duration: .2s;
+
+         @include m.tablet {
+             margin-bottom: 0;
+          }
+
+          &:hover {
+              color: v.$secondary;
+          }
+
+          &.active {
+            color: v.$secondary;
+          }
+     }
+}
