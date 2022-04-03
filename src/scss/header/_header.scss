@@ -1,42 +1,45 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-
 .header {
-    padding: 5rem 0;
-    position: relative;
+	padding: 5rem 0;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&::before {
+		content: '';
+		background-color: v.$black;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.4;
+	}
 
-    &::before {
-        content: '';
-        background-color: v.$black;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: .4;
-    }
+	.header-content {
+		position: relative;
+		@include m.tablet {
+			min-height: 55rem;
+		}
 
-    .header-content {
-        position: relative;
-        @include m.tablet {
-            min-height: 55rem;
-         }
-
-        h1 {
-            text-align: center;
-            color: v.$white;
-            text-transform: uppercase;
-            margin-top: 5rem;
-            @include m.tablet { 
-                margin-top: 10rem;
-             }
-        }
-    }
-
+		h1 {
+			text-align: center;
+			color: v.$white;
+			text-transform: uppercase;
+			margin-top: 5rem;
+			@include m.tablet {
+				margin-top: 10rem;
+			}
+		}
+	}
 }
 
 // Header of every page
 .header-home {
-    background-image: url(../img/header_inicio.jpg);
+	background-image: url(../img/header_inicio.jpg);
+}
+
+.header-us {
+	background-image: url(../img/header_nosotros.jpg);
 }

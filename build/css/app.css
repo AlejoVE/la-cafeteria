@@ -380,6 +380,12 @@ ul {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1,
 h2,
 .heading-white,
@@ -486,6 +492,8 @@ img {
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .header::before {
   content: "";
@@ -519,6 +527,10 @@ img {
 
 .header-home {
   background-image: url(../img/header_inicio.jpg);
+}
+
+.header-us {
+  background-image: url(../img/header_nosotros.jpg);
 }
 
 .bar {
@@ -809,4 +821,31 @@ img {
   font-size: 2.4rem;
   color: #5E311E;
   font-family: "Bona Nova", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+.about-content .image {
+  margin-bottom: 5rem;
+}
+@media (min-width: 1024px) {
+  .about-content .image {
+    margin-bottom: 0;
+  }
+}
+.about-content .image img {
+  transform: rotate(-6deg);
+  border: 3rem solid #FFFFFF;
+  box-shadow: 0.9rem 1rem 0.5rem -0.7rem rgba(0, 0, 0, 0.35);
+}
+.about-content .text blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5E311E;
+  font-size: 2rem;
 }

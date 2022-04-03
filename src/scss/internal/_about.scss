@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about-content {
+	@include m.desktop {
+		@include m.grid(2, 4rem);
+	}
+	.image {
+		margin-bottom: 5rem;
+
+		@include m.desktop {
+			margin-bottom: 0;
+		}
+		img {
+			transform: rotate(-6deg);
+			border: 3rem solid v.$white;
+			box-shadow: 0.9rem 1rem 0.5rem -0.7rem rgb(0 0 0 / 0.35);
+		}
+	}
+
+	.text {
+		blockquote {
+			margin: 0;
+			padding: 1rem;
+			border-left: 0.5rem solid v.$primary;
+			font-size: 2rem;
+		}
+	}
+}
