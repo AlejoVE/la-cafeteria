@@ -51,5 +51,5 @@ exports.dev = dev
 exports.images = images
 exports.webp = webpVersion
 exports.avif = avifVersion
-exports.build = series(images, webpVersion, avifVersion, css, dev)
+exports.build = series(images, webpVersion, avifVersion, css)
 exports.default = series(css, dev)
